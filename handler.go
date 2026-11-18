@@ -9,9 +9,9 @@ import (
 	"strings"
 )
 
-// namePattern is credstore's contract for names, checked before asking
-// Secret Manager, not left to it: isNotFound can then take every 422 that
-// Unveil answers with for a missing name.
+// namePattern is credstore-delivery's contract for names, checked before
+// asking Secret Manager, not left to it: isNotFound can then take every 422
+// that Unveil answers with for a missing name.
 var namePattern = regexp.MustCompile(`^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$`)
 
 var errNotFound = errors.New("not found")

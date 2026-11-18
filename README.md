@@ -4,7 +4,7 @@ A server that hands out secrets from [SAKURA Cloud Secret Manager](https://cloud
 
 ## Overview
 
-`sakura-secrets-socket serve` holds the Secret Manager credentials in its own environment and answers `GET /<name>` with the value. It implements the socket contract of [zinrai/credstore](https://github.com/zinrai/credstore).
+`sakura-secrets-socket serve` holds the Secret Manager credentials in its own environment and answers `GET /<name>` with the value. It implements the socket contract of [zinrai/credstore-delivery](https://github.com/zinrai/credstore-delivery).
 
 The socket is created with mode 0600, and a connection from another uid is refused. Values are returned as Secret Manager stores them; Secret Manager removes leading and trailing whitespace, a trailing newline included.
 
